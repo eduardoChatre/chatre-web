@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Chatre Web
 
-## Getting Started
+Landing page comercial de [Chatre](https://chatre.io), una empresa de automatización digital e inteligencia artificial que conecta agentes, mensajería, datos y procesos de negocio.
 
-First, run the development server:
+## Tecnologías
+
+- Next.js 16 con App Router
+- React 19
+- TypeScript estricto
+- Tailwind CSS 4
+- React Server Components; JavaScript cliente únicamente para la navegación móvil
+
+La interfaz usa una pila tipográfica del sistema, SVG propio y CSS. El build no descarga fuentes ni requiere recursos visuales remotos.
+
+## Instalación y desarrollo
+
+Requiere una versión de Node.js compatible con Next.js 16.
 
 ```bash
+npm install
+cp .env.example .env.local
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abre `http://localhost:3000`. Comandos de validación:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run lint
+npm run build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Variables de entorno
 
-## Learn More
+| Variable | Uso | Respaldo |
+| --- | --- | --- |
+| `NEXT_PUBLIC_BOOKING_URL` | Enlace para solicitar diagnóstico | Correo a la dirección de contacto |
+| `NEXT_PUBLIC_WHATSAPP_URL` | Enlace oficial de WhatsApp | Correo a la dirección de contacto |
+| `NEXT_PUBLIC_CONTACT_EMAIL` | Correo público | `hola@chatre.io` |
 
-To learn more about Next.js, take a look at the following resources:
+No se inventa un número de WhatsApp. Si su variable está vacía, la interfaz ofrece contacto por correo.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Estructura
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `src/app`: rutas, layout, SEO, manifest e iconos generados.
+- `src/components`: secciones reutilizables y navegación accesible.
+- `src/data`: navegación y contenido repetitivo.
+- `src/lib`: configuración pública del sitio y valores de respaldo.
+- `public`: recursos estáticos locales.
 
-## Deploy on Vercel
+## Despliegue
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+El proyecto está preparado para Vercel. Configura las variables públicas en el entorno del proyecto, despliega la rama autorizada y asigna `chatre.io` como dominio de producción. La identidad y la separación de configuración dejan preparado un futuro portal independiente en `app.chatre.io`; esta landing no incluye autenticación, base de datos ni lógica del portal.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Las rutas legales actuales son provisionales y requieren revisión profesional antes del lanzamiento definitivo.

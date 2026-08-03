@@ -1,0 +1,4 @@
+import type { Metadata } from "next";
+import { LegalPage } from "@/components/LegalPage";
+export const metadata: Metadata = { title:"Términos | Chatre", description:"Términos de uso provisionales de Chatre.", alternates:{ canonical:"/terminos" } };
+export default function TermsPage(){return <LegalPage eyebrow="Legal" title="Términos de uso"><h2>Uso del sitio</h2><p>El contenido de este sitio tiene fines informativos y comerciales. No constituye por sí mismo una oferta vinculante ni garantiza resultados específicos de una automatización.</p><h2>Servicios</h2><p>El alcance, los entregables, las responsabilidades y las condiciones de cada proyecto se establecerán por escrito antes de iniciar cualquier implementación.</p><h2>Propiedad y disponibilidad</h2><p>Las marcas, textos y elementos visuales de Chatre están protegidos por la normativa aplicable. El sitio puede modificarse para mejorar su contenido, seguridad o disponibilidad.</p></LegalPage>}
