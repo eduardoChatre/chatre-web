@@ -1,0 +1,2 @@
+import { differentiators } from "@/data/site";
+export function Differentiators() { return <section className="section differentiators"><div className="container diff-grid"><div><p className="eyebrow"><span /> Nuestro enfoque</p><h2>No instalamos herramientas aisladas. <span>Construimos sistemas conectados.</span></h2></div><ul>{differentiators.map((item) => <li key={item}><span aria-hidden="true">✓</span>{item}</li>)}</ul></div></section>; }

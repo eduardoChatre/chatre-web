@@ -1,0 +1,3 @@
+import { solutions } from "@/data/site";
+import { SectionHeading } from "./SectionHeading";
+export function Solutions() { return <section id="soluciones" className="section"><div className="container"><SectionHeading eyebrow="Soluciones" title="Tecnología que trabaja como parte de tu equipo." description="Diseñamos sistemas que entienden, conectan y ejecutan. Cada solución comienza con un problema real del negocio."/><div className="card-grid">{solutions.map(([number,title,text]) => <article className="solution-card" key={title}><div className="card-top"><span>{number}</span><i aria-hidden="true">↗</i></div><h3>{title}</h3><p>{text}</p></article>)}</div></div></section>; }

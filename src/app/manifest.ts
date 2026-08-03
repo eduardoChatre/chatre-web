@@ -1,0 +1,2 @@
+import type { MetadataRoute } from "next";
+export default function manifest(): MetadataRoute.Manifest { return { name:"Chatre — Automatización digital", short_name:"Chatre", description:"Automatización e inteligencia artificial para empresas.", start_url:"/", display:"standalone", background_color:"#050505", theme_color:"#050505", lang:"es", icons:[{ src:"/icon.svg", sizes:"any", type:"image/svg+xml" }] }; }
