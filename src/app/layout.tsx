@@ -3,7 +3,7 @@ import { siteConfig } from "@/lib/site-config";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteConfig.url),
+  metadataBase: new URL(siteConfig.domain),
   title: "Chatre | Automatización e inteligencia artificial para empresas",
   description:
     "Integramos inteligencia artificial, agentes digitales y automatizaciones para conectar ventas, atención, datos y procesos empresariales.",
@@ -37,7 +37,7 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "Chatre",
-  url: siteConfig.url,
+  url: siteConfig.domain,
   email: siteConfig.contactEmail,
   description: "Automatización digital e inteligencia artificial para empresas.",
 };

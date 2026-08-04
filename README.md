@@ -51,4 +51,16 @@ No se inventa un número de WhatsApp. Si su variable está vacía, la interfaz o
 
 El proyecto está preparado para Vercel. Configura las variables públicas en el entorno del proyecto, despliega la rama autorizada y asigna `chatre.io` como dominio de producción. La identidad y la separación de configuración dejan preparado un futuro portal independiente en `app.chatre.io`; esta landing no incluye autenticación, base de datos ni lógica del portal.
 
-Las rutas legales actuales son provisionales y requieren revisión profesional antes del lanzamiento definitivo.
+## Icono de la aplicación de Meta
+
+Con el servidor local en ejecución, descarga el PNG público de 1024 × 1024 con:
+
+```bash
+curl -L http://localhost:3000/meta-app-icon -o chatre-meta-app-icon-1024.png
+```
+
+El archivo se genera localmente, sin fuentes ni recursos externos, y se puede subir manualmente en Meta for Developers.
+
+## Eliminación de datos de Meta
+
+La ruta pública `/eliminacion-de-datos` contiene las instrucciones para solicitar la eliminación por correo. No existe todavía un callback automatizado. Antes de publicar uno en el backend, deberá validar la firma de Meta, identificar correctamente al usuario, crear una solicitud auditable, eliminar o anonimizar datos reales y devolver un código de confirmación junto con una URL de estado.
